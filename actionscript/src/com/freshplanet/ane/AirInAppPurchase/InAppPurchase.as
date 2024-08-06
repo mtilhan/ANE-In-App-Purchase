@@ -115,7 +115,7 @@ package com.freshplanet.ane.AirInAppPurchase {
             if (!isSupported)
                 _dispatchEvent(InAppPurchaseEvent.CONSUME_ERROR, "InAppPurchase not supported");
             else {
-                if (!_isIOSOrMacOS()) {
+                if (_isAndroid()) {
                     _context.call("acknowledgePurchase", productId, receipt);
                 } else {
                      _log("ERROR", "IOS doesn't have acknowledge");

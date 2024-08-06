@@ -138,7 +138,7 @@ public class BillingManagerV5 implements IBillingManager {
                             }
 
                             QueryProductDetailsParams subParams = null;
-                            if(subList.size()>0) {
+                            if(subList.size() > 0) {
                                 subParams = QueryProductDetailsParams.newBuilder()
                                         .setProductList(subList)
                                         .build();

@@ -177,7 +177,6 @@ public class ExtensionContext extends FREContext {
     private QueryInventoryFinishedListener _getProductsInfoListener = new QueryInventoryFinishedListener() {
         @Override
         public void onQueryInventoryFinished(Boolean success, String data) {
-            
             if(success) {
                 _dispatchEvent(PRODUCT_INFO_RECEIVED, data);
             }
